@@ -100,3 +100,7 @@ main > h1 {
   cursor: pointer;
   background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
 }
+
+.product button:active {
+  background-image: linear-gradient(to top, #0ba36188 0%, #3cb99188 100%);
+}

@@ -12,24 +12,36 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  left: 0;
   background-color: #053fb2b4;
   font-size: x-large;
   padding: 1rem 5vw;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 200;
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0 0.5rem 0.5rem #0000001a;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 }
 
 header a {
   color: white;
-  font-weight: 800;
+  text-transform: uppercase;
+  font-weight: 500;
   text-decoration: none;
+  letter-spacing: -2px;
 }
 
 main {
   margin: 4rem auto 6rem;
   max-width: 650px;
   width: 90vw;
+}
+
+main > h1 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 4rem;
+  letter-spacing: -2px;
 }
 
 .products {
@@ -39,13 +51,31 @@ main {
   margin-top: 3rem;
 }
 
+.product {
+  border: 1px solid #9faecb97;
+  border-radius: 4px;
+}
+
+.product > *:not(img) {
+  padding: 0.6rem;
+}
+
 .product img {
   max-width: 100%;
 }
 
+.product > .price {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  width: auto;
+  background-color: #eaeaeaaa;
+}
+
 .product form {
-  align-items: baseline;
   display: grid;
+  align-items: baseline;
   gap: 0.5rem;
   grid-template-columns: 70px 50px 1fr;
 }
@@ -59,12 +89,14 @@ main {
 }
 
 .product button {
-  background-color: teal;
+  background-color: #008017;
   border: none;
   border-radius: 0.25rem;
   color: white;
   font-size: 1.25rem;
   line-height: 1.25rem;
-  font-weight: 800;
-  padding: 0.25rem;
+  font-weight: 600;
+  padding: 0.3rem;
+  cursor: pointer;
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
 }

@@ -34,14 +34,16 @@
           max="10"
         />
         <input type="hidden" name="sku" value="" />
-        <button type="submit">Get It!</button>
+        <button class="submit-button" type="submit">Get It!</button>
       </form>
     </div>
   </template>
   <script src="https://js.stripe.com/v3/"></script>
   <script type="module">
     import { loadProducts } from './js/loadProducts.js';
+    import { showLoadingCard } from './js/interactions.js';
     loadProducts();
+    document.querySelector('.submit-button').onclick = (event) => showLoadingCard(event);
   </script>
 </body>
 </html>

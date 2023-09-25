@@ -1,4 +1,4 @@
-function getLoadingCard() {
+export function getLoadingCard() {
   const loadingScreen = document.createElement('div');
   loadingScreen.classList.add('loading-screen');
 
@@ -10,13 +10,4 @@ function getLoadingCard() {
 
   loadingScreen.appendChild(dots);
   return loadingScreen;
-}
-
-export function showLoadingCard(event) {
-  const button = event.target;
-  const card = button.closest('.product');
-  if (!card) return;
-
-  const loadingCard = getLoadingCard();
-  card.appendChild(loadingCard);
 }

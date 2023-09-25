@@ -15,12 +15,11 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #053fb2b4;
   font-size: x-large;
   padding: 1rem 5vw;
-  backdrop-filter: blur(0.5rem);
   box-shadow: 0 0 0.5rem 0.5rem #0000001a;
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  z-index: 2;
 }
 
 header a {

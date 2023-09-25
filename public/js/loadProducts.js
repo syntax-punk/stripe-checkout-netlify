@@ -1,3 +1,4 @@
+import { getLoadingCard } from './interactions.js'
 import { handleFormSubmission } from './stripePurchase.js'
 
 const isDev = globalThis.location.hostname === 'localhost';
@@ -14,30 +15,38 @@ const DEMO_PRODUCTS = [
 ];
 
 function createItemFromTemplate(item) {
-  const template = document.querySelector('#product');
-  const product = template.content.cloneNode(true);
+  const template = document.querySelector('#productTemplate');
+  const productTemplate = template.content.cloneNode(true);
 
-  product.querySelector('h2').innerHTML = item.name;
-  product.querySelector('.description').innerHTML = item.description;
-  product.querySelector('[name=sku]').value = item.sku;
-  product.querySelector('.price').innerHTML = new Intl.NumberFormat('en-US', {
+  productTemplate.querySelector('h2').innerHTML = item.name;
+  productTemplate.querySelector('.description').innerHTML = item.description;
+  productTemplate.querySelector('[name=sku]').value = item.sku;
+  productTemplate.querySelector('.price').innerHTML = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: item.currency
   }).format((item.amount / 100).toFixed(2));
   
-  const img = product.querySelector('img');
+  
+  const product = productTemplate.querySelector('.product');
+  const img = productTemplate.querySelector('img');
+  const submitButton = productTemplate.querySelector('.submit-button');
+  const form = productTemplate.querySelector('form');
+
   img.src = item.image;
   img.alt = item.name;
 
-  const form = product.querySelector('form');
+  submitButton.addEventListener("click", function() {
+    const loadingCard = getLoadingCard();
+    product.appendChild(loadingCard);
+  });
+  
   form.addEventListener("submit", handleFormSubmission);
 
-  return product;
+  return productTemplate;
 }
 
 export async function loadProducts() {
   let data;
-
   if (isDev) {
     data = DEMO_PRODUCTS;
   } else {

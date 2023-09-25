@@ -49,8 +49,9 @@ export async function loadProducts() {
       });
   }
 
-
   const products = document.querySelector('.products');
+  products.innerHTML = '';  
+
   data.forEach(item => {
     const product = createItemFromTemplate(item);
     products.appendChild(product);

@@ -44,7 +44,23 @@ main > h1 {
   letter-spacing: -2px;
 }
 
+.fetching {
+  text-align: center;
+  position: absolute;
+  top: 2rem;
+
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.fetching > .dots-loading > div {
+  background-color: #2a5298bb;
+}
+
 .products {
+  position: relative;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);

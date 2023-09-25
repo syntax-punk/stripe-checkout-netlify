@@ -19,7 +19,7 @@ header {
   padding: 1rem 5vw;
   box-shadow: 0 0 0.5rem 0.5rem #0000001a;
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-  z-index: 2;
+  z-index: 3;
 }
 
 header a {
@@ -97,7 +97,7 @@ main > h1 {
 }
 
 .product input {
-  border: 1px solid teal;
+  border: 1px solid #9faecb;
   border-radius: 0.25rem;
   font-size: 1.125rem;
   line-height: 1.125rem;
@@ -119,6 +119,26 @@ main > h1 {
 
 .product button:active {
   background-image: linear-gradient(to top, #0ba36188 0%, #3cb99188 100%);
+}
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+.made-with {
+  font-weight: 300;	
+  font-size: 0.8rem;
+  color: #2a5298;
+}
+
+.made-with a {
+  display: inline-block;
+  text-decoration: none;
+  color: #172635;
 }
 
 .loading-screen {

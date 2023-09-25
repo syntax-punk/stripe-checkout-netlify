@@ -5,13 +5,21 @@ const isDev = globalThis.location.hostname === 'localhost';
 
 const DEMO_PRODUCTS = [
   {
-    "sku": "DEMO002",
-    "name": "Adventure Mug",
-    "description": "We’re going on an adventure! Photo by Annie Spratt on Unsplash.",
-    "image": "https://images.unsplash.com/photo-1454329001438-1752daa90420?auto=format&fit=crop&w=600&h=600&q=80",
-    "amount": 1500,
+    "sku": "DEMO003",
+    "name": "RayBan Shades",
+    "description": "Polarized RayBan shades is all you need. Photo by Giorgio Trovato on Unsplash.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600&q=80",
+    "amount": 35000,
     "currency": "USD"
-  }
+  },
+  {
+    "sku": "DEMO004",
+    "name": "Polaroid Camera",
+    "description": "Capture moments to create good memories. Photo by Eniko Kis on Unsplash.",
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&h=600&w=600&q=80",
+    "amount": 7800,
+    "currency": "USD"
+  },
 ];
 
 function createItemFromTemplate(item) {

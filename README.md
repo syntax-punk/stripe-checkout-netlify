@@ -8,9 +8,8 @@ This repository contains a sample project that demonstrates how to integrate Str
 - [Getting Started](#getting-started)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
+  
 ## Prerequisites
 
 Before you get started, make sure you have the following prerequisites:
